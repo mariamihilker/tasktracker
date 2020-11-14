@@ -55,7 +55,7 @@ form button:hover {
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
-
+    transition: all .3 ease;
 }
 .todo li {
     flex: 1;
@@ -72,6 +72,19 @@ form button:hover {
 .trash-btn {
     color: #A62C2B;
 }
+.trash-btn:focus {
+    outline: none;
+}
+.complete-btn:focus {
+    outline: none;
+}
 .complete-btn {
     color: #32994E;
+}
+.completed {
+    opacity: .5;
+    text-decoration: line-through;
+}
+.fa-trash, .fa-check {
+    pointer-events: none;
 }
