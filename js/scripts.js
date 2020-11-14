@@ -20,21 +20,25 @@ function addTodo(e) {
     todoDiv.classList.add('todo')
     //create li
     const newTodo = document.createElement('li')
-    newTodo.innerText = 'test';
-    newTodo.classList.add('todo-item')
-    todoDiv.appendChild(newTodo);
-    //checkButton
-    const completedButton = document.createElement('button')
-    completedButton.innerHTML = '<i class="fas fa-check"></i>'
-    completedButton.classList.add('complete-btn')
-    todoDiv.appendChild(completedButton);
-    
-    //remove Button
-    const trashdButton = document.createElement('button')
-    trashdButton.innerHTML = '<i class="fas fa-trash"></i>'
-    trashdButton.classList.add('trash-btn')
-    todoDiv.appendChild(trashdButton);
+    if(todoInput.value != 0) {
+        //get input value
+        newTodo.innerText = todoInput.value;
+        newTodo.classList.add('todo-item')
+        todoDiv.appendChild(newTodo);
+        //checkButton
+        const completedButton = document.createElement('button')
+        completedButton.innerHTML = '<i class="fas fa-check"></i>'
+        completedButton.classList.add('complete-btn')
+        todoDiv.appendChild(completedButton);
+        
+        //remove Button
+        const trashdButton = document.createElement('button')
+        trashdButton.innerHTML = '<i class="fas fa-trash"></i>'
+        trashdButton.classList.add('trash-btn')
+        todoDiv.appendChild(trashdButton);
 
-    //add item in ul
-    todoList.appendChild(todoDiv)
+        //add item in ul
+        todoList.appendChild(todoDiv)
+        todoInput.value = '';
+}
 }
