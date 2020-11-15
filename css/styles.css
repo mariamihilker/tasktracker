@@ -34,6 +34,9 @@ form button {
     color: #190087;
     transition: all 0.3s ease;
 }
+form button:focus {
+    outline: none;
+}
 form button:hover {
     background: #3E00B3;
     color: white;
@@ -75,7 +78,7 @@ form button:hover {
     font-size: 1rem;
 }
 .trash-btn {
-    color: #A62C2B;
+    color: #FF6962;
 }
 .trash-btn:focus {
     outline: none;
@@ -107,24 +110,28 @@ select {
     cursor: pointer;
     padding: .5rem;
 }
+select option:hover {
+    box-shadow: 0 0 10px 100px #190087 inset;
+}
 .select {
-    margin: 0 0.5rem 0.5rem;
+    margin: 1px  0.5rem 0.5rem;
     position: relative;
     overflow: hidden;
 }
 
 
 .select:after {
-    content: '\25BC';
-    padding: .25rem;
-    display: inline-block;
     position: absolute;
-    top: 6px;
-    right: 0;
-    background: #3E00B3;
+    content: "";
+    top: 16px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-color: #3E00B3 transparent transparent transparent;
     pointer-events: none;
     transition: 0.5s ease;
 }
-.select:hover:after {
+/* .select:hover:after {
     background-color: #190087;
-}
+} */
