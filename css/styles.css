@@ -55,7 +55,12 @@ form button:hover {
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
-    transition: all .3 ease;
+    transition: all .3s ease;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
 }
 .todo li {
     flex: 1;
@@ -87,4 +92,39 @@ form button:hover {
 }
 .fa-trash, .fa-check {
     pointer-events: none;
+}
+
+/* Select List */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #190087;
+    width: 10rem;
+    cursor: pointer;
+    padding: .5rem;
+}
+.select {
+    margin: 0 0.5rem 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.select:after {
+    content: '\25BC';
+    padding: .25rem;
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    background: #3E00B3;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+.select:hover:after {
+    background-color: #190087;
 }
